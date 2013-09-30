@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>uploadpanel test</title>
+
+</head>
+<body class="yui3-skin-sam">
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+
+
+
+<script>
+// Create a new YUI instance and populate it with the required modules.
+YUI({
+    /*	filter : 'debug',*/
+
+    modules: {
+        'uploadPanel': {
+            fullpath: 'js/UploadPanel.js'
+        }
+    }
+}).use('panel','uploader', 'uploadPanel', function (Y) {
+	
+	
+	Y.on('click', function(ev) {
+		Y.log("Opening Uploader");
+		
+	}, '#OpenUploader');
+	
+	var uploadPanel = new Y.UploadPanel().render();
+	
+	
+	/* if (Y.Uploader.TYPE != "none") {
+	    var uploader = new Y.Uploader({
+	    	width: "300px",
+	    	height: "40px", 
+	    	
+    	}).render("#uploaderContainerID");
+
+	    Y.log(uploader);
+	    
+	    
+	 } */
+	
+	
+	/* var uploaderContainer = Y.Node.create('<div class="uploaderContainer">uploaderContainer-content</div>');
+	
+	uploaderContainer.on('click', function(ev) {
+		uploader.openFileSelectDialog();
+	});
+	 */
+	
+});
+
+</script>
+<div id="OpenUploader">Open Uploader</div>
+<div id="uploaderContainerID"></div>
+</body>
+</html>
