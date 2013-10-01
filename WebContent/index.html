@@ -25,10 +25,14 @@ YUI({
 	
 	Y.on('click', function(ev) {
 		Y.log("Opening Uploader");
-		
+		uploadPanel.show(true);
 	}, '#OpenUploader');
 	
-	var uploadPanel = new Y.UploadPanel().render();
+	var uploadPanel = new Y.UploadPanel({
+					
+	}).render();
+	
+	
 	
 	
 	/* if (Y.Uploader.TYPE != "none") {
